@@ -22,8 +22,12 @@
     "technicalindicators": "^3.1.0",
     "winston": "^3.10.0"
   },
+<<<<<<< HEAD
   "devDependencies": {
     "axios": "^1.9.0",
+=======
+ "devDependencies": {
+>>>>>>> f371d55a7e4707dd73c2a37538927b3ef0f0faa4
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-node": "^11.1.0",
