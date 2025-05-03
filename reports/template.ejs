@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Отчет по торговому боту</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1, h2 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+    canvas { margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Отчет по торговому боту</h1>
+
+  <h2>Графики индикаторов</h2>
+  <canvas id="indicatorChart" width="800" height="400"></canvas>
+
+  <script>
+    const ctx = document.getElementById('indicatorChart').getContext('2d');
+    <!-- CHART_DATA -->
+    
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: datasets.map(dataset => ({
+          label: dataset.label,
+          data: dataset.data,
+          borderColor: dataset.borderColor,
+          fill: false
+        }))
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Индикаторы'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>Последние сделки</h2>
+  <!-- TRADES_TABLE -->
+
+  <h2>Активные ордера</h2>
+  <!-- ORDERS_TABLE -->
+</body>
+</html>

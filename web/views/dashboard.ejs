@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stellar Trading Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Stellar Trading Dashboard</h1>
+  
+  <div class="section">
+    <h2>Индикаторы</h2>
+    <canvas id="indicatorChart" width="800" height="400"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>Активные ордера</h2>
+    <table id="ordersTable">
+      <thead><tr><th>ID</th><th>Тип</th><th>Цена</th><th>Кол-во</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Последние сделки</h2>
+    <table id="tradesTable">
+      <thead><tr><th>Цена</th><th>Кол-во</th><th>Тип</th><th>Время</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="/dashboard.js"></script>
+</body>
+</html>
